@@ -1,0 +1,5 @@
+name: DistributedSpawns
+main: net.andrewcr.minecraft.plugin.DistributedSpawns.Plugin
+version: 1.0
+authors: [ andrewcr ]
+depend: [ BasePluginLib ]
