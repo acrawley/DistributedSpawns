@@ -3,3 +3,36 @@ main: net.andrewcr.minecraft.plugin.DistributedSpawns.Plugin
 version: 1.0
 authors: [ andrewcr ]
 depend: [ BasePluginLib ]
+softdepend: [ Multiverse-Core, dynmap ]
+
+commands:
+  distributedspawn:
+    description: Commands to manage spawn points
+    usage: |
+      Use /help distributedspawn [subcommand] for more information
+      /distributedspawn set - Set properties to control spawn points
+      /distributedspawn info - Get information about spawn points
+  distributedspawn set:
+    description: Set properties to control spawn points
+    usage: |
+      /distributedspawn set [world] perplayer [enable|disable] - Enable or disable per-player spawn points
+      /distributedspawn set [world] distributed [enable|disable] [min-distance] - Enable or disable automatic generation of distributed spawn points
+      /distributedspawn set spawnpoint - Sets your spawn point to your current location
+      /distributedspawn set [player] spawnpoint - Sets a player's spawnpoint to their current location
+  distributedspawn info:
+    description: Get information about spawn points
+      /distributedspawn info [world] - Get spawn point configuration for world
+
+permissions:
+  distributedspawn.configure:
+    description: Determines whether or not the player can configure spawning
+    default: op
+  distributedspawn.setownspawn:
+    description: Determines whether or not the player can set their own spawn point
+    default: op
+  distributedspawn.setotherspawn:
+    description: Determines whether or not the player can set another player's spawn point
+    default: op
+  distributedspawn.info:
+    description: Determines whether or not the player can get info about spawning
+    default: true
