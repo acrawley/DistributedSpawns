@@ -1,4 +1,4 @@
-package net.andrewcr.minecraft.plugin.DistributedSpawns;
+package net.andrewcr.minecraft.plugin.DistributedSpawns.internal;
 
 public class Constants {
     public static final String PermissionRoot = "distributedspawns";

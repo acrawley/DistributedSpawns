@@ -1,10 +1,10 @@
-package net.andrewcr.minecraft.plugin.DistributedSpawns.integration.dynmap;
+package net.andrewcr.minecraft.plugin.DistributedSpawns.internal.integration.dynmap;
 
 import net.andrewcr.minecraft.plugin.BasePluginLib.util.StringUtil;
-import net.andrewcr.minecraft.plugin.DistributedSpawns.Plugin;
-import net.andrewcr.minecraft.plugin.DistributedSpawns.model.ConfigStore;
-import net.andrewcr.minecraft.plugin.DistributedSpawns.model.DistributedSpawnWorldConfig;
-import net.andrewcr.minecraft.plugin.DistributedSpawns.model.PlayerSpawn;
+import net.andrewcr.minecraft.plugin.DistributedSpawns.internal.Plugin;
+import net.andrewcr.minecraft.plugin.DistributedSpawns.internal.model.ConfigStore;
+import net.andrewcr.minecraft.plugin.DistributedSpawns.internal.model.DistributedSpawnWorldConfig;
+import net.andrewcr.minecraft.plugin.DistributedSpawns.internal.model.PlayerSpawn;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.OfflinePlayer;

@@ -1,12 +1,12 @@
-package net.andrewcr.minecraft.plugin.DistributedSpawns.model;
+package net.andrewcr.minecraft.plugin.DistributedSpawns.internal.model;
 
 import lombok.Getter;
 import lombok.Synchronized;
 import net.andrewcr.minecraft.plugin.BasePluginLib.distributions.poissondisc.PoissonDiscDistribution;
 import net.andrewcr.minecraft.plugin.BasePluginLib.util.LocationUtil;
 import net.andrewcr.minecraft.plugin.BasePluginLib.util.RandomUtil;
-import net.andrewcr.minecraft.plugin.DistributedSpawns.Plugin;
-import net.andrewcr.minecraft.plugin.DistributedSpawns.integration.dynmap.DynmapIntegration;
+import net.andrewcr.minecraft.plugin.DistributedSpawns.internal.Plugin;
+import net.andrewcr.minecraft.plugin.DistributedSpawns.internal.integration.dynmap.DynmapIntegration;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;

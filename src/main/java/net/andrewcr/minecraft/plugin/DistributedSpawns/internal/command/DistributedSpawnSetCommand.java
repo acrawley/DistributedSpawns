@@ -1,13 +1,13 @@
-package net.andrewcr.minecraft.plugin.DistributedSpawns.command;
+package net.andrewcr.minecraft.plugin.DistributedSpawns.internal.command;
 
 import net.andrewcr.minecraft.plugin.BasePluginLib.command.CommandBase;
 import net.andrewcr.minecraft.plugin.BasePluginLib.command.CommandExecutorBase;
 import net.andrewcr.minecraft.plugin.BasePluginLib.util.ArrayUtil;
 import net.andrewcr.minecraft.plugin.BasePluginLib.util.LocationUtil;
 import net.andrewcr.minecraft.plugin.BasePluginLib.util.StringUtil;
-import net.andrewcr.minecraft.plugin.DistributedSpawns.Constants;
-import net.andrewcr.minecraft.plugin.DistributedSpawns.model.ConfigStore;
-import net.andrewcr.minecraft.plugin.DistributedSpawns.model.DistributedSpawnWorldConfig;
+import net.andrewcr.minecraft.plugin.DistributedSpawns.internal.Constants;
+import net.andrewcr.minecraft.plugin.DistributedSpawns.internal.model.ConfigStore;
+import net.andrewcr.minecraft.plugin.DistributedSpawns.internal.model.DistributedSpawnWorldConfig;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.entity.Player;

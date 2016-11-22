@@ -1,16 +1,16 @@
-package net.andrewcr.minecraft.plugin.DistributedSpawns;
+package net.andrewcr.minecraft.plugin.DistributedSpawns.internal;
 
 import lombok.Getter;
 import net.andrewcr.minecraft.plugin.BasePluginLib.plugin.PluginBase;
 import net.andrewcr.minecraft.plugin.BasePluginLib.util.Version;
 import net.andrewcr.minecraft.plugin.DistributedSpawns.api.IDistributedSpawnsApi;
-import net.andrewcr.minecraft.plugin.DistributedSpawns.command.DistributedSpawnCommand;
-import net.andrewcr.minecraft.plugin.DistributedSpawns.command.DistributedSpawnInfoCommand;
-import net.andrewcr.minecraft.plugin.DistributedSpawns.command.DistributedSpawnSetCommand;
-import net.andrewcr.minecraft.plugin.DistributedSpawns.integration.dynmap.DynmapIntegration;
-import net.andrewcr.minecraft.plugin.DistributedSpawns.listener.PlayerSpawnListener;
-import net.andrewcr.minecraft.plugin.DistributedSpawns.model.ConfigStore;
-import net.andrewcr.minecraft.plugin.DistributedSpawns.model.DistributedSpawnWorldConfig;
+import net.andrewcr.minecraft.plugin.DistributedSpawns.internal.command.DistributedSpawnCommand;
+import net.andrewcr.minecraft.plugin.DistributedSpawns.internal.command.DistributedSpawnInfoCommand;
+import net.andrewcr.minecraft.plugin.DistributedSpawns.internal.command.DistributedSpawnSetCommand;
+import net.andrewcr.minecraft.plugin.DistributedSpawns.internal.integration.dynmap.DynmapIntegration;
+import net.andrewcr.minecraft.plugin.DistributedSpawns.internal.listener.PlayerSpawnListener;
+import net.andrewcr.minecraft.plugin.DistributedSpawns.internal.model.ConfigStore;
+import net.andrewcr.minecraft.plugin.DistributedSpawns.internal.model.DistributedSpawnWorldConfig;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.entity.Player;

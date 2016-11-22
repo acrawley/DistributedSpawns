@@ -1,4 +1,4 @@
-package net.andrewcr.minecraft.plugin.DistributedSpawns.command;
+package net.andrewcr.minecraft.plugin.DistributedSpawns.internal.command;
 
 import net.andrewcr.minecraft.plugin.BasePluginLib.command.CommandBase;
 import net.andrewcr.minecraft.plugin.BasePluginLib.command.CommandExecutorBase;

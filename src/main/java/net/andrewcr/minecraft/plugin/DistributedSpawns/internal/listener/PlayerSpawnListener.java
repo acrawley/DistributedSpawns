@@ -1,7 +1,7 @@
-package net.andrewcr.minecraft.plugin.DistributedSpawns.listener;
+package net.andrewcr.minecraft.plugin.DistributedSpawns.internal.listener;
 
-import net.andrewcr.minecraft.plugin.DistributedSpawns.model.ConfigStore;
-import net.andrewcr.minecraft.plugin.DistributedSpawns.model.DistributedSpawnWorldConfig;
+import net.andrewcr.minecraft.plugin.DistributedSpawns.internal.model.ConfigStore;
+import net.andrewcr.minecraft.plugin.DistributedSpawns.internal.model.DistributedSpawnWorldConfig;
 import org.bukkit.Location;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

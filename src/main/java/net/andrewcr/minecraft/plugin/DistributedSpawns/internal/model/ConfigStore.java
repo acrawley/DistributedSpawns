@@ -1,8 +1,8 @@
-package net.andrewcr.minecraft.plugin.DistributedSpawns.model;
+package net.andrewcr.minecraft.plugin.DistributedSpawns.internal.model;
 
 import lombok.Getter;
 import net.andrewcr.minecraft.plugin.BasePluginLib.config.ConfigurationFileBase;
-import net.andrewcr.minecraft.plugin.DistributedSpawns.Plugin;
+import net.andrewcr.minecraft.plugin.DistributedSpawns.internal.Plugin;
 import org.bukkit.World;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.YamlConfiguration;
