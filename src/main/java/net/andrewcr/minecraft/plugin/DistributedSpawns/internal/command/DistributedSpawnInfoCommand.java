@@ -4,6 +4,7 @@ import net.andrewcr.minecraft.plugin.BasePluginLib.command.CommandBase;
 import net.andrewcr.minecraft.plugin.BasePluginLib.command.CommandExecutorBase;
 import net.andrewcr.minecraft.plugin.BasePluginLib.util.LocationUtil;
 import net.andrewcr.minecraft.plugin.DistributedSpawns.internal.Constants;
+import net.andrewcr.minecraft.plugin.DistributedSpawns.internal.Plugin;
 import net.andrewcr.minecraft.plugin.DistributedSpawns.internal.model.ConfigStore;
 import net.andrewcr.minecraft.plugin.DistributedSpawns.internal.model.DistributedSpawnWorldConfig;
 import org.bukkit.Bukkit;
@@ -43,26 +44,27 @@ public class DistributedSpawnInfoCommand extends CommandBase {
             }
 
             DistributedSpawnWorldConfig config = ConfigStore.getInstance().getWorldConfig(world, false);
-            if (config == null) {
-                this.sendMessage("No distributed spawn configuration set for world '" + world.getName() + "'!");
-                return true;
-            }
 
             this.sendMessage("Spawn configuration for world '" + world.getName() + "':");
-            this.sendMessage("  Per-player spawns: " + (config.isPerUserSpawnEnabled() ? (ChatColor.GREEN + "YES") : (ChatColor.RED + "NO")));
-            if (config.isPerUserSpawnEnabled()) {
+            this.sendMessage("  Per-player spawns enabled : " + (config != null && config.isPerUserSpawnEnabled() ? (ChatColor.GREEN + "YES") : (ChatColor.RED + "NO")));
+            if (config != null && config.isPerUserSpawnEnabled()) {
                 this.sendMessage("    Number of configured spawns: " + config.getSpawnCount());
             }
 
-            this.sendMessage("  Distributed spawns: " + (config.isDistributedSpawnEnabled() ? (ChatColor.GREEN + "YES") : (ChatColor.RED + "NO")));
-            if (config.isDistributedSpawnEnabled()) {
+            this.sendMessage("  Distributed spawns enabled: " + (config != null && config.isDistributedSpawnEnabled() ? (ChatColor.GREEN + "YES") : (ChatColor.RED + "NO")));
+            if (config != null && config.isDistributedSpawnEnabled()) {
                 this.sendMessage("    Minimum spawn point spacing: " + config.getMinimumSpawnSpacing() + " blocks");
             }
 
             if (this.getPlayer() != null) {
-                this.sendMessage("  Your spawn location: " + LocationUtil.locationToIntString(config.getPlayerSpawn(this.getPlayer()), false, false, false));
-            }
+                this.sendMessage("  Your world spawn location: " +
+                    LocationUtil.locationToIntString(Plugin.getInstance().getPlayerSpawnLocation(world, this.getPlayer()), false, false, false));
+                this.sendMessage("  Your bed spawn location  : " +
+                    (this.getPlayer().getBedSpawnLocation() == null ?
+                        "(none)" :
+                        LocationUtil.locationToIntString(this.getPlayer().getBedSpawnLocation(), false, false, false)));
 
+            }
 
             return true;
         }
